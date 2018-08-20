@@ -9,6 +9,8 @@ gem "chatwork"
 gem "puma", "~> 3.11"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "figaro"
+gem "config"
+gem "activerecord-import"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
