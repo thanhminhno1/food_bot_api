@@ -1,0 +1,19 @@
+default: &default
+  adapter: <%= ENV["ADAPTER"] %>
+  encoding: <%= ENV["ENCODING"] %>
+  pool: <%= ENV["POOL"] %>
+  timeout: <%= ENV["TIMEOUT"] %>
+  username: <%= ENV["USERNAME"] %>
+  password: <%= ENV["PASSWORD"] %>
+
+development:
+  <<: *default
+  database: <%= ENV["DB_DEV"] %>
+
+test:
+  <<: *default
+  database: <%= ENV["DB_TEST"] %>
+
+production:
+  <<: *default
+  database: <%= ENV["DB_PRODUCT"] %>
